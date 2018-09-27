@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="YD_calendar.css">
+  <script src="YD_calendar.js"></script>
+  <style>
+    *{margin:0;padding:0;}
+    section{overflow: hidden;}
+    #datetime,#dete{
+      width:240px;
+      height:40px;
+      line-height: 40px;
+      overflow: hidden;
+      border-radius: 5px;
+      border:1px solid red;
+      padding:0 15px;
+      box-sizing: border-box;
+      font-size:16px;
+      display: block;
+      margin:35px auto;
+    }
+  </style>
+</head>
+<body>
+    <section>
+      <!-- one -->
+      <div id="datetime" data-id="birthday">选择日期</div>
+      <input type="hidden" id="birthday" name="birthday"  value="" >
+
+
+      <!-- two -->
+      <input type="text" readonly id="dete" placeholder="选择日期"">
+    </section>
+    
+    <script>
+      var calendar1 = new lCalendar().init('#datetime');
+      new lCalendar().init('#dete');
+    </script>
+</body>
+</html>
