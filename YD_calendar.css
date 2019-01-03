@@ -1,9 +1,16 @@
-.gearDate {font-family: PingFangSC-Medium, sans-serif;font-size: 10px;background-color: rgba(0, 0, 0, 0.3);display: block;position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 9900;overflow: hidden;-webkit-animation-fill-mode: both;animation-fill-mode: both;}
+.gearDate {font-family: PingFangSC-Medium, sans-serif;font-size: 10px;display: block;position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 9900;overflow: hidden;-webkit-animation-fill-mode: both;animation-fill-mode: both;}
+.date_Bg{ opacity: 0;width:100%; height:100%; background-color: rgba(0, 0, 0, 0.5); transition:opacity 400ms; -webkit-transition:opacity 400ms; -moz-transition:opacity 400ms; -ms-transition:opacity 400ms; -o-transition:opacity 400ms; }
+.date_Bg.show{opacity: 1;}
 .date_ctrl {vertical-align: middle;background-color: #ffffff;border-top:1px solid #9D998E;color: #363837;margin: 0;height: auto;width:100%;position: absolute;left: 50%;bottom:0;z-index: 9902;overflow: hidden;-webkit-transform: translate(-50%, 0);transform: translate(-50%, 0);-moz-transform: translate(-50%,0);-o-transform: translate(-50%, 0);-ms-transform: translate(-50%, 0)}
-.slideInUp1 { animation: slideInUp1 .3s ease-in; -webkit-animation: slideInUp1 .3s ease-in; }
+.slideInUp1 { animation: slideInUp1 .3s ease-out; -webkit-animation: slideInUp1 .3s ease-out; will-change: transform; }
+.slideInDown1{ animation: slideInDown1 .3s ease-out; -webkit-animation: slideInDown1 .3s ease-out; will-change: transform; }
 @-webkit-keyframes slideInUp1 {
     from { -webkit-transform: translate(-50%, 100%); transform: translate(-50%, 100%); -moz-transform: translate(-50%, 100%); -o-transform: translate(-50%, 100%); -ms-transform: translate(-50%, 100%); }
     to {-webkit-transform: translate(-50%, 0);transform: translate(-50%, 0);-moz-transform: translate(-50%,0);-o-transform: translate(-50%, 0);-ms-transform: translate(-50%, 0)}
+}
+@-webkit-keyframes slideInDown1 {
+    form {-webkit-transform: translate(-50%, 0);transform: translate(-50%, 0);-moz-transform: translate(-50%,0);-o-transform: translate(-50%, 0);-ms-transform: translate(-50%, 0)}
+    to { -webkit-transform: translate(-50%, 100%); transform: translate(-50%, 100%); -moz-transform: translate(-50%, 100%); -o-transform: translate(-50%, 100%); -ms-transform: translate(-50%, 100%); }
 }
 .date_roll {position: relative;width: 100%;height: auto;overflow: hidden;background-color: transparent;-webkit-mask: -webkit-gradient(linear, 0% 50%, 0% 100%, from(#debb47), to(rgba(36, 142, 36, 0)));-webkit-mask: -webkit-linear-gradient(top, #debb47 50%, rgba(36, 142, 36, 0));display: -webkit-flex;display: flex;display: -webkit-box;display: -moz-box;display: -ms-flexbox;}
 .date_roll>div{font-size:1.8em;height: 10em;float: left;background-color: transparent;position: relative;overflow: hidden;-webkit-flex-grow:1;-webkit-box-flex: 1.0;-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;}
